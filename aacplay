@@ -1,0 +1,3 @@
+#!/bin/bash
+cat /home/raspex/Downloads/listen.sdp |grep -m 1 rtsp |awk -F : {'print $2 ":" $3'} > /home/raspex/playlist.txt
+mplayer -playlist /home/raspex/playlist.txt
